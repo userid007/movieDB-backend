@@ -8,7 +8,7 @@ exports.login = async function (req, res) {
     const token = jwt.sign({ username: user.username }, process.env.TOKEN_SECRET, { subject: user.id, expiresIn: '90d' });
     return res.status(201).send({
       success: true,
-      data: { token },
+      data: { accessToken: token },
       message: 'successful authentication'
     });
   }
