@@ -1,6 +1,6 @@
 # movieDB-backend
 Site is deployed on aws
-[Website](http://43.204.81.46/#/home)
+~~[Website](http://43.204.81.46/#/home)~~
 
 ## How to install
 ```
