@@ -11,6 +11,7 @@ app.use(cors({ origin: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1', routes);
+app.use(express.static('dist'))
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
