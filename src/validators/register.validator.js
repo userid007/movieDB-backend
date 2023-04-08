@@ -2,7 +2,7 @@ const Joi = require('joi');
 const pattern = '^(?=(.*[a-z]){1,})(?=(.*[A-Z]){1,})(?=(.*[0-9]){1,})(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,}$';
 
 const schema = Joi.object({
-  username: Joi.string().alphanum().trim().min(10).max(30).required(),
+  username: Joi.string().alphanum().trim().min(4).max(30).required(),
   password: Joi.string().min(8).pattern(new RegExp(pattern)).required().messages({
     'string.pattern.base': 'Password is not strong'
   }),
